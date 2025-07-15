@@ -1,4 +1,4 @@
-package policies
+package aap_policy
 
 # Find credentials with no organization
 violating_credentials := {cred.name | cred := input.credentials[_]; cred.organization == null}

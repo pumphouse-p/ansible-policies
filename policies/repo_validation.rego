@@ -1,4 +1,4 @@
-package policies
+package aap_policy
 
 import rego.v1
 

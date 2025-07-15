@@ -1,4 +1,4 @@
-package policies
+package aap_policy
 
 # Define maintenance window in UTC
 maintenance_start_hour := 12 # 12:00 UTC (5 PM EST)
