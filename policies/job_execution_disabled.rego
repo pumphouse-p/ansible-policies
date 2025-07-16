@@ -2,7 +2,7 @@ package aap_policy
 
 import rego.v1
 
-allowed_false := {
+job_execution_disabled := {
 	"allowed": false,
 	"violations": ["No job execution is allowed."],
 }

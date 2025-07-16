@@ -2,12 +2,12 @@ package aap_policy
 
 import rego.v1
 
-default superuser_allowed_false := {
+default superuser_disabled := {
 	"allowed": true,
 	"violations": [],
 }
 
-superuser_allowed_false := {
+superuser_disabled := {
 	"allowed": false,
 	"violations": ["SuperUser is not allow to launch jobs"],
 } if {

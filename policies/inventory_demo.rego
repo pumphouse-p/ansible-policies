@@ -3,13 +3,13 @@ package aap_policy
 import rego.v1
 
 # Default policy response indicating allowed status with no violations
-default organization_inventory_validation := {
+default inventory_demo := {
 	"allowed": true,
 	"violations": [],
 }
 
 # Validate that only "Default" can use "Demo Inventory"
-organization_inventory_validation := result if {
+inventory_demo := result if {
 	# Extract values from input
 	inventory_name := object.get(input, ["inventory", "name"], "")
 	org_name := object.get(input, ["organization", "name"], "")

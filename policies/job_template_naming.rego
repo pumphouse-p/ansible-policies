@@ -3,13 +3,13 @@ package aap_policy
 import rego.v1
 
 # Default policy response indicating allowed status with no violations
-default jt_naming_validation := {
+default job_template_naming := {
 	"allowed": true,
 	"violations": [],
 }
 
 # Validate that job template name has correct organization and project name prefixes
-jt_naming_validation := result if {
+job_template_naming := result if {
 	# Extract values from input
 	org_name := object.get(input, ["organization", "name"], "")
 	project_name := object.get(input, ["project", "name"], "")

@@ -9,13 +9,13 @@ allowed_github_repos := [
 ]
 
 # Default policy response indicating allowed status with no violations
-default github_repo_validation := {
+default repo_validation := {
 	"allowed": true,
 	"violations": [],
 }
 
 # Validate that the GitHub repository is in the whitelist
-github_repo_validation := result if {
+repo_validation := result if {
 	# Extract SCM URL from input
 	scm_url := object.get(input, ["project", "scm_url"], "")
 
